@@ -37,7 +37,7 @@ pub fn FileUpload() -> Html {
 
     html! {
         <>
-            <input type="file" ref={input_node_ref} onchange={onchange} />
+            <input type="file" ref={input_node_ref} onchange={onchange} class="w-fit" />
             // <p>{"v: "} { input_value }</p>
         </>
     }
