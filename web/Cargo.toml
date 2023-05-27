@@ -4,4 +4,7 @@ version = "0.0.1"
 edition = "2021"
 
 [dependencies]
+log = "0.4.17"
+wasm-logger = "0.2.0"
+web-sys = "0.3.63"
 yew = { version = "0.20", features = ["csr"] }

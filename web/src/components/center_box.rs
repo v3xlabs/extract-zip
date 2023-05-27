@@ -8,6 +8,6 @@ pub struct CenterBoxProps {
 #[function_component(CenterBox)]
 pub fn center_box(CenterBoxProps { children }: &CenterBoxProps) -> Html {
     html! {
-        <div class="w-full max-w-xl p-4 border rounded-2xl">{for children.iter()}</div>
+        <div class="w-full max-w-xl p-4 border rounded-2xl mx-auto flex flex-col justify-center">{for children.iter()}</div>
     }
 }
