@@ -44,6 +44,14 @@ jobs:
         with:
           toolchain: stable
           override: true
+
+      - uses: actions/cache@v2
+        name: Setup cargo cache
+        with:
+          path: ~/.cargo
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
       
       - name: Cargo Install
         run: cd web && cargo install trunk wasm-bindgen-cli
