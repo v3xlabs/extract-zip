@@ -37,7 +37,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: cd web && pnpm install
 
       - name: Install Rust
         uses: actions-rs/toolchain@v1
@@ -46,10 +46,10 @@ jobs:
           override: true
       
       - name: Cargo Install
-        run: cargo install trunk wasm-bindgen-cli
+        run: cd web && cargo install trunk wasm-bindgen-cli
 
       - name: Build
-        run: pnpm build
+        run: cd web && pnpm build
       
       - name: Upload to edgeserver
         uses: lvkdotsh/edgeserver-action@master
