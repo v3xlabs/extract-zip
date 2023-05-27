@@ -1,0 +1,17 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles": "tailwindcss -c ./tailwind.config.js -o ./public/tailwind.css --minify",
+    "dev": "trunk serve"
+  },
+  "keywords": [],
+  "author": "lucemans",
+  "license": "GPL-3",
+  "dependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
